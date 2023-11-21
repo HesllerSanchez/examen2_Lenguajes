@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import hn.unah.lenguajes.examen2.modelos.Cliente;
+import hn.unah.lenguajes.examen2.modelos.Vehiculo;
 import hn.unah.lenguajes.examen2.repositorios.ClienteRepository;
 import hn.unah.lenguajes.examen2.repositorios.TipoClienteRepository;
 import hn.unah.lenguajes.examen2.servicios.ClienteService;
@@ -26,5 +27,12 @@ public class ClienteImpl implements ClienteService{
         // TODO Auto-generated method stub
         return this.clienteRepository.save(cliente);
     }
+    
+        @Override
+    public Cliente obtenerClienteById(Integer id) {
+        // TODO Auto-generated method stub
+        return this.clienteRepository.findById(id).orElse(null);
+    }
+
     
 }

@@ -23,5 +23,11 @@ public class VehiculoImpl implements VehiculoService{
         // TODO Auto-generated method stub
         return this.vehiculoRepository.save(vehiculo);
     }
+
+    @Override
+    public Vehiculo obtenerVehiculoById(Integer id) {
+        // TODO Auto-generated method stub
+        return this.vehiculoRepository.findById(id).orElse(null);
+    }
     
 }

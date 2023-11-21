@@ -6,4 +6,6 @@ public interface VehiculoService {
     public Vehiculo obtenerVehiculos();
 
      public Vehiculo guardarVehiculo(Vehiculo vehiculo);
+
+     public Vehiculo obtenerVehiculoById(Integer id);
 }
